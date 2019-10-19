@@ -4,6 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_sign_in"
     tools:context=".ui.activities.SignUpActivity">
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Регистрация"
+        android:textColor="#E4E4E4"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+    <EditText
+        android:id="@+id/email_sign_up_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/login_form_details_light"
+        android:fontFamily="@font/raleway_semibold"
+        android:hint="Почта"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColor="#e3e3e3"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/login_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/login_form_details_light"
+        android:fontFamily="@font/raleway_semibold"
+        android:hint="Логин"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:textColor="#e3e3e3"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/email_sign_up_et" />
+
+    <EditText
+        android:id="@+id/password_sign_up_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/login_form_details_light"
+        android:fontFamily="@font/raleway_semibold"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="#e3e3e3"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/login_et" />
+
+    <EditText
+        android:id="@+id/password_confirm_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/login_form_details_light"
+        android:fontFamily="@font/raleway_semibold"
+        android:hint="Подтвердите пароль"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="#e3e3e3"
+        android:textColorHint="#616161"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/password_sign_up_et" />
+
+    <Button
+        android:id="@+id/complete_sign_up_button"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="false"
+        android:textColor="#BDBDBD"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_buttom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_confirm_et"
+        app:layout_constraintVertical_bias="0.616" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="24dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
