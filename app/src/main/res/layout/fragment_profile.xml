@@ -26,19 +26,21 @@
         android:id="@+id/email_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="pochta@yandex.ru"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/email_confirm_button"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/name_edit_text" />
 
     <EditText
         android:id="@+id/name_edit_text"
-        android:layout_width="355dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@color/login_form_details_light"
         android:hint="Котэ"
         android:inputType="textEmailAddress"
@@ -46,16 +48,18 @@
         android:textColor="#e3e3e3"
         android:textColorHint="#616161"
         android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/email_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/email_confirm_button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/avatar_image_view"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.17000002" />
 
     <Button
         android:id="@+id/email_confirm_button"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/raleway_semibold"
@@ -70,8 +74,10 @@
 
     <Button
         android:id="@+id/change_password_button"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/raleway_semibold"
@@ -86,8 +92,10 @@
 
     <Button
         android:id="@+id/sign_out_button"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/raleway_semibold"

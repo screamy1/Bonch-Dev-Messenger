@@ -27,8 +27,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="116dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/login_form_details_light"
         android:fontFamily="@font/raleway_semibold"
         android:hint="Почта"
@@ -36,18 +36,18 @@
         android:padding="16dp"
         android:textColor="#e3e3e3"
         android:textColorHint="#616161"
+        app:layout_constraintBottom_toTopOf="@+id/login_et"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
     <EditText
         android:id="@+id/login_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
         android:background="@color/login_form_details_light"
         android:fontFamily="@font/raleway_semibold"
         android:hint="Логин"
@@ -55,17 +55,17 @@
         android:padding="16dp"
         android:textColor="#e3e3e3"
         android:textColorHint="#616161"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/email_sign_up_et" />
+        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
     <EditText
         android:id="@+id/password_sign_up_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:background="@color/login_form_details_light"
         android:fontFamily="@font/raleway_semibold"
@@ -77,7 +77,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/login_et" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <EditText
         android:id="@+id/password_confirm_et"
@@ -100,8 +100,11 @@
 
     <Button
         android:id="@+id/complete_sign_up_button"
-        android:layout_width="280dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/btn_bg"
         android:fontFamily="@font/raleway_semibold"
         android:text="Зарегистрироваться"
@@ -109,11 +112,8 @@
         android:textColor="#BDBDBD"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline_buttom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_confirm_et"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
@@ -142,4 +142,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
