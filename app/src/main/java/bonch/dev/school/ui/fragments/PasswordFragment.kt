@@ -1,17 +1,16 @@
 package bonch.dev.school.ui.fragments
 
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.FrameLayout
 import androidx.fragment.app.DialogFragment
 import bonch.dev.school.R
-import bonch.dev.school.ui.activities.MainAppActivity
 
 
 class PasswordFragment : DialogFragment() {
@@ -25,13 +24,12 @@ class PasswordFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view: View = inflater.inflate(R.layout.fragment_password, null)
+        dialog!!.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        changePasswordButton = view.findViewById(R.id.change_password_button)
+        changePasswordButton.setOnClickListener { dismiss() }
 
-        /*oldPasswordEditText = view!!.findViewById(R.id.old_password_edit_text)
-        newPasswordEditText = view!!.findViewById(R.id.new_password_edit_text)
-        confirmPasswordEditText = view!!.findViewById(R.id.confirm_password_edit_text)
-        changePasswordButton = view!!.findViewById(R.id.change_password_button)*/
-
-        return inflater.inflate(R.layout.fragment_password, container, false)
+        return view
     }
 
 

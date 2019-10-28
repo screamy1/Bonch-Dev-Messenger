@@ -4,9 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import bonch.dev.school.R
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.widget.Button
 import android.widget.EditText
 
@@ -37,6 +34,7 @@ class SignInActivity : AppCompatActivity() {
     private fun setListeners() {
         signInButton.setOnClickListener {
             val intent = Intent(this, MainAppActivity::class.java)
+            finishAffinity()
             startActivity(intent)
         }
         signUpButton.setOnClickListener {

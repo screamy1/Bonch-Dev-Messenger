@@ -1,7 +1,6 @@
 package bonch.dev.school.ui.fragments
 
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,11 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 
 import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
-import bonch.dev.school.ui.activities.SignUpActivity
 
 class ChatFragments : Fragment() {
 
@@ -22,14 +19,16 @@ class ChatFragments : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?): View? {
+        savedInstanceState: Bundle?
+    ): View? {
         val view = inflater.inflate(R.layout.fragment_chat, container, false)
 
         sendMessageButton = view.findViewById(R.id.send_message_button)
         messageEt = view.findViewById(R.id.message_et)
 
         sendMessageButton.setOnClickListener {
-            (context as MainAppActivity).moveToProfileFragment() }
+            (context as MainAppActivity).moveToProfileFragment()
+        }
 
         return view
     }
